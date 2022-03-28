@@ -33,3 +33,6 @@ eslint-plugin-react@^7.28.0 @typescript-eslint/eslint-plugin@latest eslint-confi
 ```
 
 - airbnb로 설치함
+
+- 에러 해결
+  - https://stackoverflow.com/questions/55198502/using-eslint-with-typescript-unable-to-resolve-path-to-module

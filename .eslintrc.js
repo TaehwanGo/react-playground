@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     'airbnb',
@@ -26,6 +27,15 @@ module.exports = {
     ],
     quotes: 'off',
     'react/jsx-one-expression-per-line': 'off',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
+    'no-console': 'off',
+    'import/extensions': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 };

@@ -7,9 +7,6 @@ function App() {
 
   useEffect(() => {
     console.log(setA('A'));
-    useEffect(() => {
-      console.log('it should make an error');
-    }, []);
   }, []);
   return (
     <div className="App">
