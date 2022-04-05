@@ -30,6 +30,10 @@ module.exports = {
     'no-unused-vars': 'off',
     'no-console': 'off',
     'import/extensions': 'off',
+    'react/function-component-definition': 'off',
+    'arrow-body-style': 'off',
+    'import/no-unresolved': 'off',
+    'import/no-extraneous-dependencies': 'off',
   },
   settings: {
     'import/resolver': {
