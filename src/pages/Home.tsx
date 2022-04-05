@@ -1,7 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Home() {
-  return <div>home</div>;
+  return (
+    <>
+      <h1>home</h1>
+      <Link to="/about">go to about</Link>
+    </>
+  );
 }
 
 export default Home;
