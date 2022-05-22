@@ -9,6 +9,7 @@ function Router() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/study-swr" element={<About />} />
       </Routes>
     </BrowserRouter>
   );
