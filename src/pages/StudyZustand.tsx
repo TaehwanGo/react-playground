@@ -1,16 +1,6 @@
 import React from 'react';
-import create from 'zustand';
 import Name from '@/components/Name';
-
-type CountStore = {
-  count: number;
-  increaseCount: () => void;
-};
-
-export const useCountStore = create<CountStore>((set) => ({
-  count: 1,
-  increaseCount: () => set((state) => ({ count: state.count + 1 })),
-}));
+import useCountStore from '@/store/useCountStore';
 
 const StudyZustand = () => {
   const { count, increaseCount } = useCountStore();

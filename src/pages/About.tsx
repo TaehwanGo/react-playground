@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import useNameStore from '@/store/useNameStore';
-import { useCountStore } from './StudyZustand';
+import useCountStore from '@/store/useCountStore';
 
 function About() {
   const inputRef = useRef<HTMLInputElement>(null);
