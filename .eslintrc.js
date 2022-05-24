@@ -34,6 +34,7 @@ module.exports = {
     'arrow-body-style': 'off',
     'import/no-unresolved': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'object-curly-newline': 'off',
   },
   settings: {
     'import/resolver': {
