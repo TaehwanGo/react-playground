@@ -5,6 +5,7 @@ import Home from '@/pages/Home';
 import StudySWR from '@/pages/StudySWR';
 import StudyZustand from '@/pages/StudyZustand';
 import FileDownload from '@/pages/FileDownload';
+import ReactTablePage from '@/pages/ReactTablePage';
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
         <Route path="/study/swr" element={<StudySWR />} />
         <Route path="/study/zustand" element={<StudyZustand />} />
         <Route path="/files" element={<FileDownload />} />
+        <Route path="/table" element={<ReactTablePage />} />
       </Routes>
     </BrowserRouter>
   );

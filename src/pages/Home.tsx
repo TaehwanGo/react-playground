@@ -16,6 +16,9 @@ function Home() {
       <Div>
         <Link to="/files">go to file download</Link>
       </Div>
+      <Div>
+        <Link to="/table">go to file react table</Link>
+      </Div>
     </>
   );
 }
