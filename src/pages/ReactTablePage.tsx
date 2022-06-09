@@ -1,12 +1,27 @@
 // react-table 공부
 import React, { useMemo } from "react";
 import { faker } from '@faker-js/faker';
-import ReactTable from "@/components/ReactTable";
+import ReactTable, { Columns } from "@/components/ReactTable";
 
 faker.seed(100);
 
 function ReactTablePage() {
-  const columns = ["Name", "Email", "Phone"];
+  const columns: Columns[] = useMemo(() => {
+    return [
+      {
+        Header: "Name",
+        accessor: "name",
+      },
+      {
+        Header: "Email",
+        accessor: "email",
+      },
+      {
+        Header: "Phone",
+        accessor: "phone",
+      },
+    ];
+  }, []);
 
   const data = useMemo(() => {
     return Array(53)

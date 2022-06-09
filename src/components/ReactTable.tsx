@@ -1,4 +1,5 @@
 import React from "react";
+import { useTable } from "react-table";
 
 type TableData = {
     name: string;
@@ -6,18 +7,27 @@ type TableData = {
     phone: string;
 }
 
+export type Columns = {
+    Header: string;
+    accessor: keyof TableData;
+}
+
 type ReactTableProps = {
-    columns: string[];
+    columns: Columns[];
     data: TableData[];
 };
 
 function ReactTable({ columns, data }: ReactTableProps) {
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({
+    columns, data,
+  });
+  const { style, className, role } = getTableProps();
   return (
-    <table>
+    <table style={style} className={className} role={role}>
       <thead>
         <tr>
           {columns.map((column) => (
-            <th key={column}>{column}</th>
+            <th key={column.Header}>{column.Header}</th>
           ))}
         </tr>
       </thead>
