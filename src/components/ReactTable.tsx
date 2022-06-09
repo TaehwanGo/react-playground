@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useTable } from 'react-table';
+import { useTable, useSortBy, HeaderGroup, UseSortByColumnProps } from 'react-table';
 
 type TableData = {
   name: string;
@@ -17,11 +17,16 @@ type ReactTableProps = {
   data: TableData[];
 };
 
+interface ColumnForSort extends UseSortByColumnProps<TableData>, HeaderGroup<TableData> {}
+
 function ReactTable({ columns, data }: ReactTableProps) {
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({
-    columns,
-    data,
-  });
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable(
+    {
+      columns,
+      data,
+    },
+    useSortBy,
+  );
   const { style: tableStyle, className: tableClassName, role: tableRole } = getTableProps();
   const { style: bodyStyle, className: bodyClassName, role: bodyRole } = getTableBodyProps();
   return (
@@ -30,7 +35,10 @@ function ReactTable({ columns, data }: ReactTableProps) {
         {headerGroups.map((headerGroup, index) => (
           <tr {...headerGroup.getHeaderGroupProps()} key={index}>
             {headerGroup.headers.map((column) => (
-              <th {...column.getHeaderProps()} key={column.id}>
+              <th
+                {...column.getHeaderProps((column as ColumnForSort).getSortByToggleProps())}
+                key={column.id}
+              >
                 {column.render('Header')}
               </th>
             ))}
