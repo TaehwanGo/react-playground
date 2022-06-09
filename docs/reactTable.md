@@ -210,3 +210,11 @@ export default ReactTable;
 ```
 
 - useTable의 return값들
+
+## Sort
+
+- Type이 제대로 적용이 안돼서 그지같다
+- as를 사용해서 어거지로 맞췄다
+- 공식문서는 7버전대 문서를 봐야 한다
+  - https://react-table-v7.tanstack.com/docs/examples/sorting
+- 현재 공식문서를 아무생각없이 보면 8버전대가 보이니 주의하자
