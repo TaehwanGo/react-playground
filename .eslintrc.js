@@ -29,7 +29,6 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'object-curly-newline': 'off',
     'react/jsx-props-no-spreading': 'off',
-    'react/no-array-index-key': 'off',
   },
   settings: {
     'import/resolver': {
