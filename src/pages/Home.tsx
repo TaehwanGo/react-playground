@@ -19,6 +19,9 @@ function Home() {
       <Div>
         <Link to="/table">go to file react table</Link>
       </Div>
+      <Div>
+        <Link to="/upload">go to file upload</Link>
+      </Div>
     </>
   );
 }

@@ -29,6 +29,8 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'object-curly-newline': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
+    'no-restricted-syntax': 'off',
   },
   settings: {
     'import/resolver': {
