@@ -3,7 +3,7 @@ import VideoTitle from '@/components/VideoTitle';
 
 export const VIDEO_GROUP_LIST = [
   {
-    videoGroupId: '1',
+    videoGroupId: 'a',
     videoGroupTitle: '영상 1',
     videos: [
       {
@@ -19,7 +19,7 @@ export const VIDEO_GROUP_LIST = [
     ],
   },
   {
-    videoGroupId: '2',
+    videoGroupId: 'b',
     videoGroupTitle: '영상 2',
     videos: [
       {
@@ -30,6 +30,37 @@ export const VIDEO_GROUP_LIST = [
       {
         id: '4',
         title: '영상 2-2',
+        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      },
+      {
+        id: '5',
+        title: '영상 2-3',
+        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      },
+    ],
+  },
+  {
+    videoGroupId: 'c',
+    videoGroupTitle: '영상 3',
+    videos: [
+      {
+        id: 'c1',
+        title: '영상 3-1',
+        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      },
+      {
+        id: 'c2',
+        title: '영상 3-2',
+        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      },
+      {
+        id: 'c3',
+        title: '영상 3-3',
+        url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      },
+      {
+        id: 'c4',
+        title: '영상 3-4',
         url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
       },
     ],
@@ -74,7 +105,10 @@ const NestedRouting = () => {
       return;
     }
 
-    if (videoCurrentInfo.currentVideoIndex < videoCurrentInfo.lastVideoIndex) {
+    if (
+      videoCurrentInfo.currentVideoIndex <
+      VIDEO_GROUP_LIST[videoCurrentInfo.currentGroupIndex].videos.length - 1
+    ) {
       setVideoCurrentInfo({
         ...videoCurrentInfo,
         currentVideoIndex: videoCurrentInfo.currentVideoIndex + 1,
