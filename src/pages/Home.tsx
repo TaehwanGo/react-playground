@@ -22,6 +22,11 @@ function Home() {
       <Div>
         <Link to="/upload">go to file upload</Link>
       </Div>
+      <Div>
+        <Link to="/nested-routing">
+          go to nested routing
+        </Link>
+      </Div>
     </>
   );
 }

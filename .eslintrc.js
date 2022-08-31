@@ -31,6 +31,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
     'no-restricted-syntax': 'off',
+    'operator-linebreak': 'off',
   },
   settings: {
     'import/resolver': {
