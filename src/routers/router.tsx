@@ -8,6 +8,7 @@ import FileDownload from '@/pages/FileDownload';
 import ReactTablePage from '@/pages/ReactTablePage';
 import UploadPage from '@/pages/Upload';
 import NestedRouting from '@/pages/NestedRouting';
+import AddComponent from '@/pages/AddComponent';
 
 function Router() {
   return (
@@ -21,6 +22,7 @@ function Router() {
         <Route path="/table" element={<ReactTablePage />} />
         <Route path="/upload" element={<UploadPage />} />
         <Route path="/nested-routing" element={<NestedRouting />} />
+        <Route path="/add-component" element={<AddComponent />} />
       </Routes>
     </BrowserRouter>
   );
