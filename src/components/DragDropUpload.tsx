@@ -1,4 +1,5 @@
 import React, { ChangeEvent, useCallback, useRef, useState, useEffect } from 'react';
+import axiosInstance from '@/lib/axios/axiosCommon';
 import './DragDropUpload.scss';
 
 interface IFileTypes {
@@ -108,6 +109,20 @@ const DragDropUpload = () => {
     return () => resetDragEvents();
   }, [initDragEvents, resetDragEvents]);
 
+  const handleSubmitFiles = () => {
+    const formData = new FormData();
+    files.forEach((file: IFileTypes) => {
+      formData.append('files', file.object);
+    });
+    formData.append('data', JSON.stringify({ name: 'test' }));
+
+    axiosInstance.post('/api/v1/upload', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+  };
+
   return (
     <div className="DragDrop">
       <label
@@ -126,8 +141,8 @@ const DragDropUpload = () => {
       </label>
 
       <div className="DragDrop-Files">
-        {files.length > 0
-          && files.map((file: IFileTypes) => {
+        {files.length > 0 &&
+          files.map((file: IFileTypes) => {
             const {
               id,
               object: { name },
@@ -136,13 +151,22 @@ const DragDropUpload = () => {
             return (
               <div key={id}>
                 <div>{name}</div>
-                <button type="button" className="DragDrop-Files-Filter" onClick={() => handleFilterFile(id)}>
+                <button
+                  type="button"
+                  className="DragDrop-Files-Filter"
+                  onClick={() => handleFilterFile(id)}
+                >
                   X
                 </button>
               </div>
             );
           })}
       </div>
+      {files.length > 0 && (
+        <button type="button" onClick={handleSubmitFiles}>
+          전송
+        </button>
+      )}
     </div>
   );
 };

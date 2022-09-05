@@ -13,7 +13,6 @@ const UploadPage = () => {
       console.log(e?.target?.files[0]);
     }
   };
-
   return (
     <div>
       <h1>Upload</h1>
@@ -26,7 +25,13 @@ const UploadPage = () => {
         <button type="button" onClick={handleButtonClick}>
           파일 업로드
         </button>
-        <input type="file" ref={fileInput} onChange={handleChange} style={{ display: 'none' }} />
+        <input
+          type="file"
+          ref={fileInput}
+          multiple
+          onChange={handleChange}
+          style={{ display: 'none' }}
+        />
       </div>
       <div style={{ padding: '10px' }}>
         <DragDropUpload />
