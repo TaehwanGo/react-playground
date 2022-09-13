@@ -32,6 +32,7 @@ module.exports = {
     'jsx-a11y/label-has-associated-control': 'off',
     'no-restricted-syntax': 'off',
     'operator-linebreak': 'off',
+    'no-plusplus': 'off',
   },
   settings: {
     'import/resolver': {

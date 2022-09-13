@@ -9,6 +9,7 @@ import ReactTablePage from '@/pages/ReactTablePage';
 import UploadPage from '@/pages/Upload';
 import NestedRouting from '@/pages/NestedRouting';
 import AddComponent from '@/pages/AddComponent';
+import ListPerformance from '@/pages/ListPerformance';
 
 function Router() {
   return (
@@ -23,6 +24,7 @@ function Router() {
         <Route path="/upload" element={<UploadPage />} />
         <Route path="/nested-routing" element={<NestedRouting />} />
         <Route path="/add-component" element={<AddComponent />} />
+        <Route path="/list-performance" element={<ListPerformance />} />
       </Routes>
     </BrowserRouter>
   );

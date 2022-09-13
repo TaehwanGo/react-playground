@@ -28,6 +28,9 @@ function Home() {
       <Div>
         <Link to="/add-component">go to add dynamically component</Link>
       </Div>
+      <Div>
+        <Link to="/list-performance">go to list performance test</Link>
+      </Div>
     </>
   );
 }
