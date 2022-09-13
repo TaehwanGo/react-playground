@@ -31,6 +31,9 @@ function Home() {
       <Div>
         <Link to="/list-performance">go to list performance test</Link>
       </Div>
+      <Div>
+        <Link to="/sangte">go to sangte state library</Link>
+      </Div>
     </>
   );
 }

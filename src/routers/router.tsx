@@ -10,6 +10,7 @@ import UploadPage from '@/pages/Upload';
 import NestedRouting from '@/pages/NestedRouting';
 import AddComponent from '@/pages/AddComponent';
 import ListPerformance from '@/pages/ListPerformance';
+import SangtePage from '@/pages/SangtePage';
 
 function Router() {
   return (
@@ -25,6 +26,7 @@ function Router() {
         <Route path="/nested-routing" element={<NestedRouting />} />
         <Route path="/add-component" element={<AddComponent />} />
         <Route path="/list-performance" element={<ListPerformance />} />
+        <Route path="/sangte" element={<SangtePage />} />
       </Routes>
     </BrowserRouter>
   );
