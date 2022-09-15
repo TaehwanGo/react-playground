@@ -58,6 +58,37 @@ const ListPerformance = () => {
     },
     [listObject],
   );
+  const handleUpdateInArray = useCallback(
+    (id: string) => {
+      console.time('handleUpdateInArray');
+      setList(
+        list.map((item) => {
+          if (item.id === id) {
+            return {
+              ...item,
+              text: 'updated',
+            };
+          }
+          return item;
+        }),
+      );
+      console.timeEnd('handleUpdateInArray');
+    },
+    [list],
+  );
+  const handleUpdateInObject = useCallback(
+    (id: string) => {
+      console.time('handleUpdateInObject');
+      const tempList = { ...listObject };
+      tempList[id] = {
+        ...tempList[id],
+        text: 'updated',
+      };
+      setListObject(tempList);
+      console.timeEnd('handleUpdateInObject');
+    },
+    [listObject],
+  );
   return (
     <Container>
       <div>
@@ -65,7 +96,7 @@ const ListPerformance = () => {
         <ul>
           {list.map((item) => (
             <li key={item.id}>
-              <button type="button" onClick={() => handleDeleteInArray(item.id)}>
+              <button type="button" onClick={() => handleUpdateInArray(item.id)}>
                 {item.text}
               </button>
             </li>
@@ -78,7 +109,7 @@ const ListPerformance = () => {
           {listObject &&
             Object.values(listObject).map((item) => (
               <li key={item.id}>
-                <button type="button" onClick={() => handleDeleteInObject(item.id)}>
+                <button type="button" onClick={() => handleUpdateInObject(item.id)}>
                   {item.text}
                 </button>
               </li>
