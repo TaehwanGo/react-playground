@@ -31,6 +31,9 @@ function Home() {
       <Div>
         <Link to="/list-performance">go to list performance test</Link>
       </Div>
+      <Div>
+        <Link to="/cleanup">go to useEffect cleanup</Link>
+      </Div>
     </>
   );
 }
