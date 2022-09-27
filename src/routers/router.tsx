@@ -11,6 +11,7 @@ import NestedRouting from '@/pages/NestedRouting';
 import AddComponent from '@/pages/AddComponent';
 import ListPerformance from '@/pages/ListPerformance';
 import Cleanup from '@/pages/Cleanup';
+import RefUpdate from '@/pages/RefUpdate';
 
 function Router() {
   return (
@@ -27,6 +28,7 @@ function Router() {
         <Route path="/add-component" element={<AddComponent />} />
         <Route path="/list-performance" element={<ListPerformance />} />
         <Route path="/cleanup" element={<Cleanup />} />
+        <Route path="/ref-update" element={<RefUpdate />} />
       </Routes>
     </BrowserRouter>
   );
