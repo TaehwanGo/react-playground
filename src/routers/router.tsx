@@ -12,6 +12,7 @@ import AddComponent from '@/pages/AddComponent';
 import ListPerformance from '@/pages/ListPerformance';
 import Cleanup from '@/pages/Cleanup';
 import RefUpdate from '@/pages/RefUpdate';
+import AxiosTest from '@/pages/AxiosTest';
 
 function Router() {
   return (
@@ -29,6 +30,7 @@ function Router() {
         <Route path="/list-performance" element={<ListPerformance />} />
         <Route path="/cleanup" element={<Cleanup />} />
         <Route path="/ref-update" element={<RefUpdate />} />
+        <Route path="/axios-test" element={<AxiosTest />} />
       </Routes>
     </BrowserRouter>
   );
