@@ -13,6 +13,7 @@ import ListPerformance from '@/pages/ListPerformance';
 import Cleanup from '@/pages/Cleanup';
 import RefUpdate from '@/pages/RefUpdate';
 import AxiosTest from '@/pages/AxiosTest';
+import VoiceToText from '@/pages/VoiceToText';
 
 function Router() {
   return (
@@ -31,6 +32,7 @@ function Router() {
         <Route path="/cleanup" element={<Cleanup />} />
         <Route path="/ref-update" element={<RefUpdate />} />
         <Route path="/axios-test" element={<AxiosTest />} />
+        <Route path="/speech-to-text" element={<VoiceToText />} />
       </Routes>
     </BrowserRouter>
   );
