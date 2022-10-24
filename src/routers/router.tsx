@@ -14,6 +14,7 @@ import Cleanup from '@/pages/Cleanup';
 import RefUpdate from '@/pages/RefUpdate';
 import AxiosTest from '@/pages/AxiosTest';
 import VoiceToText from '@/pages/VoiceToText';
+import AudioRecorder from '@/components/AudioRecorder';
 
 function Router() {
   return (
@@ -33,6 +34,7 @@ function Router() {
         <Route path="/ref-update" element={<RefUpdate />} />
         <Route path="/axios-test" element={<AxiosTest />} />
         <Route path="/speech-to-text" element={<VoiceToText />} />
+        <Route path="/audio-recorder" element={<AudioRecorder />} />
       </Routes>
     </BrowserRouter>
   );

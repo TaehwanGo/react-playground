@@ -34,6 +34,9 @@ function Home() {
       <Div>
         <Link to="/cleanup">go to useEffect cleanup</Link>
       </Div>
+      <Div>
+        <Link to="/audio-recorder">go to audio-recorder</Link>
+      </Div>
     </>
   );
 }
