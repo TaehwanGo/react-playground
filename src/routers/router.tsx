@@ -15,6 +15,7 @@ import RefUpdate from '@/pages/RefUpdate';
 import AxiosTest from '@/pages/AxiosTest';
 import VoiceToText from '@/pages/VoiceToText';
 import AudioRecorder from '@/components/AudioRecorder';
+import PathParam from '@/pages/PathParam';
 
 function Router() {
   return (
@@ -35,6 +36,8 @@ function Router() {
         <Route path="/axios-test" element={<AxiosTest />} />
         <Route path="/speech-to-text" element={<VoiceToText />} />
         <Route path="/audio-recorder" element={<AudioRecorder />} />
+        <Route path="/path-param" element={<PathParam />} />
+        <Route path="/path-param/:id" element={<PathParam />} />
       </Routes>
     </BrowserRouter>
   );
