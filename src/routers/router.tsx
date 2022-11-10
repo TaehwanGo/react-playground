@@ -17,6 +17,7 @@ import VoiceToText from '@/pages/VoiceToText';
 import AudioRecorder from '@/components/AudioRecorder';
 import PathParam from '@/pages/PathParam';
 import Caching from '@/pages/Caching';
+import Player from '@/pages/Player';
 
 function Router() {
   return (
@@ -40,6 +41,7 @@ function Router() {
         <Route path="/path-param" element={<PathParam />} />
         <Route path="/path-param/:id" element={<PathParam />} />
         <Route path="/caching" element={<Caching />} />
+        <Route path="/player" element={<Player />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
