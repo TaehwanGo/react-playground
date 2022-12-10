@@ -18,6 +18,7 @@ import AudioRecorder from '@/components/AudioRecorder';
 import PathParam from '@/pages/PathParam';
 import Caching from '@/pages/Caching';
 import Player from '@/pages/Player';
+import DragAndDrop from '@/pages/DragAndDrop';
 
 function Router() {
   return (
@@ -42,6 +43,7 @@ function Router() {
         <Route path="/path-param/:id" element={<PathParam />} />
         <Route path="/caching" element={<Caching />} />
         <Route path="/player" element={<Player />} />
+        <Route path="/drag-and-drop" element={<DragAndDrop />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

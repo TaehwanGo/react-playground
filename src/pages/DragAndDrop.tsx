@@ -1,10 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
+import ReOrder from '@/components/dragAndDrop/ReOrder';
+
+const Div = styled.div`
+  padding: 10px;
+`;
 
 const DragAndDrop = () => {
   return (
-    <div>
+    <Div>
       <h1>DragAndDrop</h1>
-    </div>
+      <h2>Re order</h2>
+      <ReOrder />
+    </Div>
   );
 };
 

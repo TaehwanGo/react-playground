@@ -37,6 +37,9 @@ function Home() {
       <Div>
         <Link to="/audio-recorder">go to audio-recorder</Link>
       </Div>
+      <Div>
+        <Link to="/drag-and-drop">go to drag and drop</Link>
+      </Div>
     </>
   );
 }
