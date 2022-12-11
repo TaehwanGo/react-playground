@@ -24,15 +24,20 @@ const ReOrder = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable droppableId="studentsList">
-        {(provided) => (
-          <Container ref={provided.innerRef} {...provided.droppableProps}>
+        {(provided, droppableSnapshot) => (
+          <Container
+            ref={provided.innerRef}
+            {...provided.droppableProps}
+            isDraggingOver={droppableSnapshot.isDraggingOver}
+          >
             {studentList.map((student, index) => (
               <Draggable key={student.id} draggableId={student.id} index={index}>
-                {(provided2) => (
+                {(provided2, snapshot) => (
                   <Item
                     ref={provided2.innerRef}
                     {...provided2.draggableProps}
                     {...provided2.dragHandleProps}
+                    isDragging={snapshot.isDragging}
                   >
                     {student.name}
                   </Item>

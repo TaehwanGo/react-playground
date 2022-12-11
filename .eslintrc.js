@@ -33,6 +33,8 @@ module.exports = {
     'no-restricted-syntax': 'off',
     'operator-linebreak': 'off',
     'no-plusplus': 'off',
+    'no-confusing-arrow': 'off',
+    'implicit-arrow-linebreak': 'off',
   },
   settings: {
     'import/resolver': {
