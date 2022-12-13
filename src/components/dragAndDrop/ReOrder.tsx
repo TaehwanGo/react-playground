@@ -1,5 +1,6 @@
 import React from 'react';
-import { DragDropContext, Draggable, Droppable, DropResult } from 'react-beautiful-dnd';
+import styled from 'styled-components';
+import { DragDropContext, Draggable, DragUpdate, Droppable, DropResult } from 'react-beautiful-dnd';
 import { students } from '@/data/dataForDnd';
 import Container from '../atoms/Container';
 import Item from '../atoms/Item';
@@ -21,6 +22,15 @@ const ReOrder = () => {
     newStudentList.splice(destination.index, 0, removed); // insert
     setStudentList(newStudentList);
   };
+
+  const Handle = styled.div`
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    border-radius: 4px;
+    margin-right: 8px;
+  `;
+
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable droppableId="studentsList">
@@ -39,6 +49,7 @@ const ReOrder = () => {
                     {...provided2.dragHandleProps}
                     isDragging={snapshot.isDragging}
                   >
+                    {/* <Handle {...provided2.dragHandleProps} /> */}
                     {student.name}
                   </Item>
                 )}

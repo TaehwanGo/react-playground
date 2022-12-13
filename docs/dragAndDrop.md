@@ -27,6 +27,14 @@ const newState = {
 };
 ```
 
+## callbacks
+
+- dragStart, dragUpdate도 있지만 보통은 UI업데이트엔 dragEnd를 주로 사용
+
+## dragHandle
+
+- props에 {...provided2.dragHandleProps} 추가
+
 ## 이슈
 
 - https://github.com/atlassian/react-beautiful-dnd/issues/2407
