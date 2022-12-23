@@ -4,7 +4,12 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  extends: ['airbnb', 'plugin:react/recommended', 'plugin:jsx-a11y/recommended'],
+  extends: [
+    'airbnb',
+    'plugin:react/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:storybook/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -17,7 +22,12 @@ module.exports = {
   rules: {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'react/jsx-filename-extension': [
+      2,
+      {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    ],
     quotes: 'off',
     'react/jsx-one-expression-per-line': 'off',
     'no-unused-vars': 'off',
@@ -35,6 +45,9 @@ module.exports = {
     'no-plusplus': 'off',
     'no-confusing-arrow': 'off',
     'implicit-arrow-linebreak': 'off',
+    'react/no-unescaped-entities': 'off',
+    'import/prefer-default-export': 'off',
+    'react/require-default-props': 'off',
   },
   settings: {
     'import/resolver': {
