@@ -48,6 +48,8 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'import/prefer-default-export': 'off',
     'react/require-default-props': 'off',
+    'react/no-array-index-key': 'off',
+    'no-undef': 'off',
   },
   settings: {
     'import/resolver': {
