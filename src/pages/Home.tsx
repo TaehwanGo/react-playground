@@ -40,6 +40,9 @@ function Home() {
       <Div>
         <Link to="/drag-and-drop">go to drag and drop</Link>
       </Div>
+      <Div>
+        <Link to="/toast-ui-editor">go to toast-ui-editor</Link>
+      </Div>
     </>
   );
 }
