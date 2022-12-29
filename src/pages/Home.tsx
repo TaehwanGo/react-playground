@@ -1,43 +1,14 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import SnowFlake, { MIN_DURATION } from '@/components/atoms/SnowFlake';
 
 const Div = styled.div`
   padding: 10px;
 `;
 
 function Home() {
-  const [snowFlakes, setSnowFlakes] = React.useState<JSX.Element[]>([]);
-
-  const makeSnowFlake = () => {
-    const duration = Math.random() * 20 + MIN_DURATION;
-    const delay = Math.random() * 10;
-
-    setSnowFlakes((prev) => [
-      ...prev,
-      <SnowFlake
-        key={(duration + delay) * new Date().getMilliseconds()}
-        animationDelay={delay}
-        animationDuration={duration}
-      />,
-    ]);
-
-    setTimeout(() => {
-      setSnowFlakes((prev) => prev.slice(1));
-    }, (duration + delay) * 1000);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      makeSnowFlake();
-    }, 100);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <>
-      {snowFlakes}
       <h1>home</h1>
       <Div>
         <Link to="/about">go to about</Link>
