@@ -91,3 +91,42 @@ Primary.args = {
 ```
 
 - 해당 컴포넌트의 주요 상태 스냅샷에 포함될 상태를 설정하는 부분
+
+## 이슈
+
+### 절대경로 인식 못 함
+
+- tsconfig.json에서 설정한 절대경로를 인식하지 못 함
+
+```json
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src"]
+}
+```
+
+### App.tsx에서 가져온 공통 css는 적용되지 않음
+
+- 각 컴포넌트에서 독립적으로 css를 import해야 storybook에 올바르게 표시 됨
+- 해당 story에서 공통 css를 import해서 해결
+- 이 문제는 다시 찾아봐야겠다 해결 방법이 있을 것 같다
