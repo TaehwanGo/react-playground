@@ -19,11 +19,13 @@ import PathParam from '@/pages/PathParam';
 import Caching from '@/pages/Caching';
 import Player from '@/pages/Player';
 import DragAndDrop from '@/pages/DragAndDrop';
+import ToastUiEditor from '@/pages/ToastUiEditor';
 
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* TODO: 경로 상수로 분리해서 관리하기 */}
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/study/swr" element={<StudySWR />} />
@@ -44,6 +46,7 @@ function Router() {
         <Route path="/caching" element={<Caching />} />
         <Route path="/player" element={<Player />} />
         <Route path="/drag-and-drop" element={<DragAndDrop />} />
+        <Route path="/toast-ui-editor" element={<ToastUiEditor />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
