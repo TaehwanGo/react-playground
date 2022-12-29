@@ -6,16 +6,6 @@ import EditCard from '@/components/molecules/EditCard';
 const CustomCommonLayout = styled(CommonLayout)`
   background-color: #fff;
   color: #000;
-
-  .toastui-editor-contents h1 {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .toastui-editor-contents h2 {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
 `;
 
 const ToastUiEditor = () => {
