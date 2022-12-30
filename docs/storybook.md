@@ -125,6 +125,30 @@ Primary.args = {
 }
 ```
 
+#### storybook에서 절대 경로 설정하기
+
+- 참고 : https://velog.io/@1998yuki0331/TS-storybook-%EC%A0%88%EB%8C%80-%EA%B2%BD%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0
+
+```
+npm install -D tsconfig-paths-webpack-plugin
+```
+
+- .storybook/main.js 수정
+
+```js
+module.exports = {
+  // ...
+  // 아래 코드 추가
+  webpackFinal: async (config) => ({
+    ...config,
+    resolve: {
+      ...config.resolve,
+      ...config.resolve.plugins.push(new TsconfigPathsPlugin({})),
+    },
+  }),
+};
+```
+
 ### App.tsx에서 가져온 공통 css는 적용되지 않음
 
 - 각 컴포넌트에서 독립적으로 css를 import해야 storybook에 올바르게 표시 됨

@@ -1,7 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import EditCard from '@/components/molecules/EditCard';
 
-import EditCard from '../components/molecules/EditCard';
+// import EditCard from '../components/molecules/EditCard';
 
 export default {
   title: 'Molecules/EditCard',
