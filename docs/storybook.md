@@ -129,4 +129,5 @@ Primary.args = {
 
 - 각 컴포넌트에서 독립적으로 css를 import해야 storybook에 올바르게 표시 됨
 - 해당 story에서 공통 css를 import해서 해결
-- 이 문제는 다시 찾아봐야겠다 해결 방법이 있을 것 같다
+- preview.js에서 import하면 모든 story에 적용됨
+  - https://velog.io/@kimhyo_0218/Storybook-emotion%EC%9C%BC%EB%A1%9C-storybook-%EA%B8%80%EB%A1%9C%EB%B2%8C-%EC%8A%A4%ED%83%80%EC%9D%BC-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0-reset-css
