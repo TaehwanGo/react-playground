@@ -43,6 +43,9 @@ function Home() {
       <Div>
         <Link to="/toast-ui-editor">go to toast-ui-editor</Link>
       </Div>
+      <Div>
+        <Link to="/sass-test">go to sass-test</Link>
+      </Div>
     </>
   );
 }
