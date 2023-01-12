@@ -45,6 +45,10 @@ function Home() {
       </Div>
       <Div>
         <Link to="/sass-test">go to sass-test</Link>
+        {/* editor-quill */}
+      </Div>
+      <Div>
+        <Link to="/editor-quill">go to editor-quill</Link>
       </Div>
     </>
   );
