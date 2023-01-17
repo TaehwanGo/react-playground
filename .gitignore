@@ -24,3 +24,6 @@ yarn-error.log*
 
 # files
 public/files/*
+
+# build
+/storybook-static
