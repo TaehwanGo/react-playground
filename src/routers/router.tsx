@@ -22,6 +22,7 @@ import DragAndDrop from '@/pages/DragAndDrop';
 import ToastUiEditor from '@/pages/ToastUiEditor';
 import SassTest from '@/pages/SassTest';
 import QuillPage from '@/pages/Quill';
+import ResizeElement from '@/pages/ResizeElement';
 
 function Router() {
   return (
@@ -51,6 +52,7 @@ function Router() {
         <Route path="/toast-ui-editor" element={<ToastUiEditor />} />
         <Route path="/sass-test" element={<SassTest />} />
         <Route path="/editor-quill" element={<QuillPage />} />
+        <Route path="/resize-element" element={<ResizeElement />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

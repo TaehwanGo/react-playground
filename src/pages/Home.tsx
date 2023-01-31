@@ -50,6 +50,9 @@ function Home() {
       <Div>
         <Link to="/editor-quill">go to editor-quill</Link>
       </Div>
+      <Div>
+        <Link to="/resize-element">go to resize-element</Link>
+      </Div>
     </>
   );
 }
