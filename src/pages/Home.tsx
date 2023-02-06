@@ -53,6 +53,9 @@ function Home() {
       <Div>
         <Link to="/resize-element">go to resize-element</Link>
       </Div>
+      <Div>
+        <Link to="/swiper">go to swiper</Link>
+      </Div>
     </>
   );
 }
