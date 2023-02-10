@@ -25,6 +25,7 @@ import QuillPage from '@/pages/Quill';
 import ResizeElement from '@/pages/ResizeElement';
 import SlickPage from '@/pages/SlickPage';
 import SwiperPage from '@/pages/SwiperPage';
+import CircularProgressbarPage from '@/pages/CircularProgressbarPage';
 
 function Router() {
   return (
@@ -57,6 +58,7 @@ function Router() {
         <Route path="/resize-element" element={<ResizeElement />} />
         <Route path="/slick" element={<SlickPage />} />
         <Route path="/swiper" element={<SwiperPage />} />
+        <Route path="/circular-progressbar" element={<CircularProgressbarPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
