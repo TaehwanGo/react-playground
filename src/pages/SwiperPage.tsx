@@ -57,10 +57,11 @@ const SwiperPage = () => {
           pagination={{
             dynamicBullets: true,
             clickable: true,
-            renderBullet: (index) => {
+            renderBullet: (index, className) => {
               return ReactDOMServer.renderToStaticMarkup(
                 <SwiperPageButton
                   type="button"
+                  className={className}
                   onClick={() => {
                     console.log('bullet clicked', index);
                     // not working
