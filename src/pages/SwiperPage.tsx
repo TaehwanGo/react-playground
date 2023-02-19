@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Pagination, Navigation } from 'swiper';
+import SwiperInstance, { Pagination, Navigation } from 'swiper';
 import styled from 'styled-components';
 import './SwiperPage.scss';
+import * as ReactDOMServer from 'react-dom/server';
 
 const Page = styled.div`
   background-color: white;
@@ -37,9 +38,15 @@ const SwiperWrapper = styled.div`
   position: relative;
 `;
 
+const SwiperPageButton = styled.button`
+  background-color: orange;
+  padding: 10px;
+`;
+
 const SwiperPage = () => {
   const [prevEl, setPrevEl] = useState<HTMLElement | null>(null);
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
+  const [swiper, setSwiper] = useState<SwiperInstance>();
 
   return (
     <Page>
@@ -49,7 +56,21 @@ const SwiperPage = () => {
           loop
           pagination={{
             dynamicBullets: true,
-            // clickable: true,
+            clickable: true,
+            renderBullet: (index) => {
+              return ReactDOMServer.renderToStaticMarkup(
+                <SwiperPageButton
+                  type="button"
+                  onClick={() => {
+                    console.log('bullet clicked', index);
+                    // not working
+                    swiper?.slideTo(index);
+                  }}
+                >
+                  {index}
+                </SwiperPageButton>,
+              );
+            },
           }}
           navigation={{
             prevEl,
@@ -59,7 +80,7 @@ const SwiperPage = () => {
           slidesPerView={1.1}
           centeredSlides
           onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
+          onSwiper={(_swiper) => setSwiper(_swiper)}
         >
           <SwiperSlide>
             <SlideCard>Slide 1</SlideCard>
