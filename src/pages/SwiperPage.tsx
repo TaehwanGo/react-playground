@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -48,6 +48,26 @@ const SwiperPage = () => {
   const [nextEl, setNextEl] = useState<HTMLElement | null>(null);
   const [swiper, setSwiper] = useState<SwiperInstance>();
 
+  const handleClickSwiperPagination = (event: Event) => {
+    const target = event.target as HTMLElement;
+    const id = target?.dataset.id;
+    if (id) {
+      console.log('pagination clicked', id);
+    }
+  };
+
+  useEffect(() => {
+    const swiperPagination = document.querySelector('.swiper-pagination');
+    if (swiperPagination) {
+      swiperPagination.addEventListener('click', handleClickSwiperPagination);
+    }
+    return () => {
+      if (swiperPagination) {
+        swiperPagination.removeEventListener('click', handleClickSwiperPagination);
+      }
+    };
+  }, []);
+
   return (
     <Page>
       <SwiperWrapper>
@@ -62,6 +82,7 @@ const SwiperPage = () => {
                 <SwiperPageButton
                   type="button"
                   className={className}
+                  data-id={index}
                   onClick={() => {
                     console.log('bullet clicked', index);
                     // not working
@@ -80,7 +101,7 @@ const SwiperPage = () => {
           spaceBetween={10}
           slidesPerView={1.1}
           centeredSlides
-          onSlideChange={() => console.log('slide change')}
+          // onSlideChange={() => console.log('slide change')}
           onSwiper={(_swiper) => setSwiper(_swiper)}
         >
           <SwiperSlide>
