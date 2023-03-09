@@ -26,6 +26,7 @@ import ResizeElement from '@/pages/ResizeElement';
 import SlickPage from '@/pages/SlickPage';
 import SwiperPage from '@/pages/SwiperPage';
 import CircularProgressbarPage from '@/pages/CircularProgressbarPage';
+import ContextMenu from '@/pages/ContextMenu';
 
 function Router() {
   return (
@@ -59,6 +60,7 @@ function Router() {
         <Route path="/slick" element={<SlickPage />} />
         <Route path="/swiper" element={<SwiperPage />} />
         <Route path="/circular-progressbar" element={<CircularProgressbarPage />} />
+        <Route path="/context-menu" element={<ContextMenu />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
