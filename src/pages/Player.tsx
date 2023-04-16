@@ -10,10 +10,11 @@ const Player = () => {
       <ReactPlayer
         width="100%"
         height="100%"
-        url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        url="https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"
+        // url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
         // url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
         controls
-        light
+        // light
         config={{
           file: {
             attributes: {
