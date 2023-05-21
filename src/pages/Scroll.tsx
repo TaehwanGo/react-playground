@@ -20,6 +20,8 @@ const PageContainer = styled.div`
     background-color: red;
     border-radius: 8px;
   } */
+
+  touch-action: pan-y;
 `;
 
 const TestBox = styled.div`
