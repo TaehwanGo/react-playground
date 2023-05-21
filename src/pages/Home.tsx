@@ -59,6 +59,9 @@ function Home() {
       <Div>
         <Link to="/circular-progressbar">go to circular-progressbar</Link>
       </Div>
+      <Div>
+        <Link to="/scroll">go to scroll style</Link>
+      </Div>
     </>
   );
 }
