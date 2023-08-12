@@ -1,4 +1,4 @@
 # React playground
 
-- [ ] ESLint 세팅
-- [ ] storybook 세팅
+- [x] ESLint 세팅
+- [x] storybook 세팅
