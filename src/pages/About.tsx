@@ -4,6 +4,7 @@ import useNameStore from '@/store/useNameStore';
 import useCountStore from '@/store/useCountStore';
 import withLogging from '@/util/wrapLogging';
 import Button from '@/components/atoms/Button';
+import wrapAlert from '@/util/wrapAlert';
 
 const ButtonWithLogging = withLogging(Button);
 
@@ -11,6 +12,10 @@ function About() {
   const inputRef = useRef<HTMLInputElement>(null);
   const { name, setName } = useNameStore();
   const { count } = useCountStore();
+  const occurError = () => {
+    throw new Error('error');
+  };
+  const handleClickButton = wrapAlert(occurError);
   return (
     <>
       <h1>about</h1>
@@ -27,13 +32,7 @@ function About() {
       <Link to="/">go home</Link>
       <Link to="/study/zustand">/study/zustand</Link>
       <div>
-        <ButtonWithLogging
-          onClick={() => {
-            throw new Error('error');
-          }}
-        >
-          buttonWithLogging
-        </ButtonWithLogging>
+        <ButtonWithLogging onClick={handleClickButton}>buttonWithLogging</ButtonWithLogging>
       </div>
     </>
   );
