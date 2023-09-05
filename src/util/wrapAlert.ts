@@ -1,8 +1,10 @@
-export default function wrapAlert<T, R>(f: (params: T) => R) {
+type FunctionWithParams<T extends any[], R> = (...args: T) => R;
+
+export default function wrapAlert<T extends any[], R>(f: FunctionWithParams<T, R>) {
   // eslint-disable-next-line consistent-return
-  return (params: T) => {
+  return (...params: T) => {
     try {
-      return f(params);
+      return f(...params);
     } catch (error) {
       console.error(error);
       // eslint-disable-next-line no-alert
