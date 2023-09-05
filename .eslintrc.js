@@ -50,6 +50,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/no-array-index-key': 'off',
     'no-undef': 'off',
+    'react/button-has-type': 'warn',
   },
   settings: {
     'import/resolver': {

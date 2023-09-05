@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const container = document.getElementById('root') as Element;
+
 createRoot(container).render(
   // <React.StrictMode> // react-beautiful-dnd does not work with StrictMode
   <App />,
